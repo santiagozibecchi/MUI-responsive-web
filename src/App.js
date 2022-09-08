@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button, Typography, styled } from "@mui/material";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const BlueBotton = styled(Button)({
+      backgroundColor: "skyblue",
+      color: "#888",
+      margin: 5,
+      "&:hover": {
+         backgroundColor: "lightblue",
+      },
+   });
+
+   return (
+      <div>
+         <Button variant="text" startIcon={<AddCircleOutlineIcon />}>
+            Add text
+         </Button>
+         <Button variant="contained" disabled>
+            Contained
+         </Button>
+         <Button variant="contained" color="secondary">
+            Contained
+         </Button>
+         <Button variant="outlined" color="success">
+            Outlined
+         </Button>
+
+         <Typography variant="h3">Hola</Typography>
+
+         <BlueBotton>Hola</BlueBotton>
+      </div>
+   );
 }
 
 export default App;
