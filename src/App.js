@@ -1,35 +1,19 @@
-import { Button, Typography, styled } from "@mui/material";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import { Box, Container, Stack } from "@mui/material";
+import Feed from "./components/Feed";
+import Navbar from "./components/Navbar";
+import Rightbar from "./components/Rightbar";
+import Sidebar from "./components/Sidebar";
 
 function App() {
-   const BlueBotton = styled(Button)({
-      backgroundColor: "skyblue",
-      color: "#888",
-      margin: 5,
-      "&:hover": {
-         backgroundColor: "lightblue",
-      },
-   });
-
    return (
-      <div>
-         <Button variant="text" startIcon={<AddCircleOutlineIcon />}>
-            Add text
-         </Button>
-         <Button variant="contained" disabled>
-            Contained
-         </Button>
-         <Button variant="contained" color="secondary">
-            Contained
-         </Button>
-         <Button variant="outlined" color="success">
-            Outlined
-         </Button>
-
-         <Typography variant="h3">Hola</Typography>
-
-         <BlueBotton>Hola</BlueBotton>
-      </div>
+      <Box Boxsx={{ backgroundColor: "red" }}>
+         <Navbar />
+         <Stack direction="row" spacing={2} justifyContent="space-between">
+            <Sidebar />
+            <Feed />
+            <Rightbar />
+         </Stack>
+      </Box>
    );
 }
 
