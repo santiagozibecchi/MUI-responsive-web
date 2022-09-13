@@ -14,7 +14,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import ArchitectureIcon from "@mui/icons-material/Architecture";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
-const Sidebar = () => {
+const Sidebar = ({ setMode, mode }) => {
    return (
       <Box flex={1} p={2} sx={{ display: { xs: "none", lg: "block" } }}>
          <Box position="fixed">
@@ -56,7 +56,11 @@ const Sidebar = () => {
                      <ListItemIcon>
                         <DarkModeIcon />
                      </ListItemIcon>
-                     <Switch />
+                     <Switch
+                        onChange={() =>
+                           setMode(mode === "light" ? "dark" : "light")
+                        }
+                     />
                   </ListItemButton>
                </ListItem>
             </List>

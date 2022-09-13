@@ -80,9 +80,10 @@ const Rightbar = () => {
             </Typography>
 
             <List
+               bgcolor={"background.default"}
+               color={"text.primary"}
                sx={{
                   width: "100%",
-                  bgcolor: "white",
                   display: "flex",
                   flexDirection: "column",
                   height: "200px",
